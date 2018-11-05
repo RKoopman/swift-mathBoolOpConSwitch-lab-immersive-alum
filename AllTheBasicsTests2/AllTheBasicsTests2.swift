@@ -1,15 +1,15 @@
 //
-//  AllTheBasicsTest.swift
-//  AllTheBasics
+//  AllTheBasicsTests2.swift
+//  AllTheBasicsTests2
 //
-//  Created by James Campagno on 9/14/16.
-//  Copyright © 2016 Flatiron School. All rights reserved.
+//  Created by Raoul Koopman on 3/28/18.
+//  Copyright © 2018 Flatiron School. All rights reserved.
 //
 
 import XCTest
 @testable import AllTheBasics
 
-class AllTheBasicsTest: XCTestCase {
+class AllTheBasicsTest2: XCTestCase {
     
     let testVC = ViewController()
     
@@ -22,7 +22,7 @@ class AllTheBasicsTest: XCTestCase {
     }
     
     func testAverageIsAbove75() {
-
+        
         XCTAssertFalse(testVC.averageIsAbove75(a: 76, b: 75, c: 71.9), "Average is below 75, it should return false."  )
         
         XCTAssertFalse(testVC.averageIsAbove75(a: 75, b: 75, c: 75), "Average must be over 75 to return true.")
@@ -53,17 +53,21 @@ class AllTheBasicsTest: XCTestCase {
     
     func testDescribeEmoji() {
         
-        XCTAssertEqual(testVC.describe(emoji: "💋"), "Kiss", "The kiss emoji should return the string 'Kiss'")
         
-        XCTAssertEqual(testVC.describe(emoji: "🐈"), "Cat", "The cat emoji should return the string 'Cat'")
+        //print()
+        testVC.describe(emoji: "")
         
-        XCTAssertEqual(testVC.describe(emoji: "🐢"), "Turtle", "The turtle emoji should return the string 'Turtle'")
+        //XCTAssertEqual(testVC.describe(emoji: ""), "Kiss", "The kiss emoji should return the string 'Kiss'")
         
-        XCTAssertEqual(testVC.describe(emoji: "🍕"), "Pizza", "The pizza emoji should return the string 'Pizza'")
+                XCTAssertEqual(testVC.describe(emoji: "🐈"), "Cat", "The cat emoji should return the string 'Cat'")
         
-        XCTAssertEqual(testVC.describe(emoji: "👻"), "Ghost", "The ghost emoji should return the string 'Ghost'")
+                XCTAssertEqual(testVC.describe(emoji: "🐢"), "Turtle", "The turtle emoji should return the string 'Turtle'")
         
-        XCTAssertEqual(testVC.describe(emoji: "💩"), "Unknown", "The poo emoji should return the string 'Unknown' because it's not in the list of emojis we want to describe in our function.")
+                XCTAssertEqual(testVC.describe(emoji: "🍕"), "Pizza", "The pizza emoji should return the string 'Pizza'")
+        
+                XCTAssertEqual(testVC.describe(emoji: "👻"), "Ghost", "The ghost emoji should return the string 'Ghost'")
+        
+                XCTAssertEqual(testVC.describe(emoji: "💩"), "Unknown", "The poo emoji should return the string 'Unknown' because it's not in the list of emojis we want to describe in our function.")
         
     }
     
