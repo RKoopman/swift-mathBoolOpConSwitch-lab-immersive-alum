@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     // Implement your functions here
-    
     func averageIsAbove75(a: Double, b: Double, c: Double) -> Bool {
         let ave = (a + b + c) / 3
         if ave > 75 {
@@ -19,7 +18,7 @@ class ViewController: UIViewController {
             return false
         }
     }
-
+    
     func passwordCombo(username: String, password: Int) -> String {
         switch username {
         case "Jerry":
@@ -44,7 +43,7 @@ class ViewController: UIViewController {
             return "Access denied"
         }
     }
-
+    
     func describe(emoji: String) -> String {
         switch emoji {
         case "💋":
